@@ -219,7 +219,9 @@ public class WatsonTTS : MonoBehaviour {
 		yield break;
 	}
 
-	private void OnSTTRecognize(SpeechRecognitionEvent result)
+//	private void OnSTTRecognize(SpeechRecognitionEvent result)
+//  updated for Watson SDK 2.4.0 compatability
+    private void OnSTTRecognize(SpeechRecognitionEvent result, Dictionary<string, object> customData)
 	{
 		if (result != null && result.results.Length > 0)
 		{
@@ -266,7 +268,9 @@ public class WatsonTTS : MonoBehaviour {
 	}
 
 	//potentially useful to detect difference between different people speaking?
-	private void OnSTTRecognizeSpeaker(SpeakerRecognitionEvent result)
+//	private void OnSTTRecognizeSpeaker(SpeakerRecognitionEvent result)
+//  updated for Watson SDK 2.4.0 compatability
+    private void OnSTTRecognizeSpeaker(SpeakerRecognitionEvent result, Dictionary<string, object> customData)
 	{
 		if (result != null)
 		{
