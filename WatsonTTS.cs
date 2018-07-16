@@ -367,10 +367,6 @@ public class WatsonTTS : MonoBehaviour {
 			audioSrc.clip = clip;
 			audioSrc.Play();
 
-			StartCoroutine(Look(0f, 2f, lookTargets[0])); // Look at LEFT
-			StartCoroutine(Look(5f, 2f, lookTargets[1])); // Look at RIGHT
-
-
 			//set flag values that can be picked up in the Update() loop
 			wait = clip.length;
 			check = true;
